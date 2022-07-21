@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --persian-font: IRANSans;
+    --english-font: 'Poppins', sans-serif;
+    --english-font-weight: 500;
+    --persian-font-weight: 600;
+
+    --primary-color: #6205ED;
+    --secondary-color: #8505CA;
+    --third-color: #A705A7;
+    --fourth-color: #CA0483;
+    --fifth-color: #EC0460;
+}
+@font-face {
+    font-family: IRANSans;
+    src: url(IRANSans.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::selection {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+img {
+    user-select: none;
+}
+body, button {
+    font-family: var(--persian-font);
+    font-weight: var(--persian-font-weight);
+}
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.box {
+    background-color: #FFF;
+    width: 450px;
+    border-radius: 5px;
+    padding: 2rem 1rem;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.question-box {
+    transition: 1s;
+}
+.question {
+    text-align: center;
+}
+.question-content {
+    gap: 2rem;
+}
+.options {
+    display: flex;
+    gap: 2rem;
+}
+.option {
+    font-family: var(--english-font);
+    font-size: 1rem;
+    background-color: var(--fourth-color);
+    color: #FFF;
+    width: 180px;
+    padding: 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.option:hover {
+    background-color: var(--fifth-color);
+    transform: scale(1.2);
+}
+.replay {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+}
+.replay:hover {
+    background-color: var(--secondary-color);
+}
+.answer-box {
+    position: relative;
+    display: none;
+    transition: 1s;
+}
+.show-answer {
+    display: inline;
+    animation: flip-in-ver-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes flip-in-ver-right {
+    0% {
+        -webkit-transform: rotateY(-80deg);
+        transform: rotateY(-80deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+.answers {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: #FFF;
+    border-radius: 5px;
+    width: 190px;
+    padding: 1rem;
+}
+.correct-info {
+    background-color: #068152;
+}
+.wrong-info {
+    background-color: #b30e0e;
+}
+.answer-true, .answer-false {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    height: 150px;
+    margin-bottom: 5rem;
+}
+.answer-true button, .answer-false button {
+    padding: .7rem;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    color: #FFF;
+    transition: .3s;
+}
+.answer-true button:hover, .answer-false button:hover {
+    transform: scale(1.3);
+}
+.true {
+    font-size: 2rem;
+    color: #068152;
+}
+.wrong {
+    font-size: 2rem;
+    color: #b30e0e;
+}
+.button-group {
+    position: absolute;
+    bottom: 1rem;
+}
+.button-group button {
+    border-radius: 3px;
+    padding: 1rem;
+    transition: .2s;
+}
+.button-group button:hover {
+    transform: scale(1.1);
+}
+.wrong-btn {
+    background-color: #b30e0e;
+    color: #FFF;
+}
+.hard-btn {
+    background-color: #fdfd0d;
+}
+.normal-btn {
+    background-color: #0babc7;
+    color: #FFF;
+}
+.easy-btn {
+    background-color: #0caf70;
+}
+@media screen and (max-width: 470px) {
+    .option {
+        width: 130px;
+    }
+    .correct-info, .wrong-info {
+        width: 145px;
+    }
+    .phonetic {
+        font-size: 14px;
+    }
+}

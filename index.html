@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d51f589380.js"></script>
+    <title>Fluent Flashcard</title>
+</head>
+<body>
+
+    <audio id="fun-soundtrack" src="soundtracks/Voice 001.m4a"></audio>
+    <audio id="fan-soundtrack" src="soundtracks/Voice 002.m4a"></audio>
+
+    <div class="question-box box" id="question-box">
+        <div class="question-content flex">
+            <div class="options">
+                <button class="option button answer-toggle" id="first-option">fun</button>
+                <button class="option button answer-toggle" id="second-option">fan</button>
+            </div>
+
+            <p class="question">صدای زیر مربوط به کدام کلمه است؟</p>
+
+            <button class="replay button" onclick="PlaySound()"><i class="fa-solid fa-volume-high"></i> پخش صدا</button>
+        </div>
+    </div>
+
+    <div class="answer-box box" id="answer-box">
+        <div class="answer-content flex">
+            <div class="answers">
+                <div class="answer">
+                    <div class="correct-info info">
+                        <h2 class="word">fun</h2>
+                        <p class="phonetic">/fʌn/ :فونتیک کلمه</p>
+                    </div>
+                    <div class="answer-true">
+                        <button class="button" id="fun-sound-btn" onclick="PlayFunSound()"><i class="fa-solid fa-volume-high"></i></button>
+                        <i class="fa-solid fa-circle-check true"></i>
+                    </div>
+                </div>
+                <div class="answer">
+                    <div class="wrong-info info">
+                        <h2 class="word">fan</h2>
+                        <p class="phonetic">/fAn/ :فونتیک کلمه</p>
+                    </div>
+                    <div class="answer-false">
+                        <button class="button" id="fan-sound-btn" onclick="PlayFanSound()"><i class="fa-solid fa-volume-high"></i></button>
+                        <i class="fa-solid fa-circle-xmark wrong"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="button wrong-btn">اشتباه</button>
+                <button class="button hard-btn">سخت</button>
+                <button class="button normal-btn">متوسط</button>
+                <button class="button easy-btn">راحت</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
