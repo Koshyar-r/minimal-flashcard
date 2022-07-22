@@ -194,13 +194,19 @@ body {
     background-color: #0caf70;
 }
 @media screen and (max-width: 470px) {
+    .question-box {
+        width: 290px;
+    }
+    .answer-box {
+        width: 300px;
+    }
     .option {
-        width: 130px;
+        width: 120px;
     }
     .correct-info, .wrong-info {
-        width: 145px;
+        width: 120px;
     }
     .phonetic {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
