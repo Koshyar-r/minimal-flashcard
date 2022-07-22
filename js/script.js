@@ -17,14 +17,23 @@ if(SecondOption) {
     })
 }
 
-function PlaySound() {
-    document.getElementById("fun-soundtrack").play()
+function Random() {
+        let Rand = Math.floor(Math.random() * 2)
+        document.getElementsByTagName('audio')[Rand].play()
 }
+
+function PlaySound() {
+    // document.getElementById("fun-soundtrack").play()
+}
+
+const FunAudio = document.getElementById("fun-soundtrack")
 
 function PlayFunSound() {
-    document.getElementById("fun-soundtrack").play()
+    FunAudio.play()
 }
 
+const FanAudio = document.getElementById("fan-soundtrack")
+
 function PlayFanSound() {
-    document.getElementById("fan-soundtrack").play()
+    FanAudio.play()
 }
