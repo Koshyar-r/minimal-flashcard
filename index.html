@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/d51f589380.js"></script>
     <title>Fluent Flashcard</title>
 </head>
-<body>
+<body onload="Random()">
 
     <audio id="fun-soundtrack" src="soundtracks/Voice 001.m4a"></audio>
     <audio id="fan-soundtrack" src="soundtracks/Voice 002.m4a"></audio>
@@ -20,9 +20,9 @@
                 <button class="option button answer-toggle" id="second-option">fan</button>
             </div>
 
-            <p class="question">صدای زیر مربوط به کدام کلمه است؟</p>
+            <p class="question">صدایی که پخش شد مربوط به کدام کلمه است؟</p>
 
-            <button class="replay button" onclick="PlaySound()"><i class="fa-solid fa-volume-high"></i> پخش صدا</button>
+            <button class="replay button"><i class="fa-solid fa-volume-high"></i> پخش مجدد</button>
         </div>
     </div>
 
@@ -60,6 +60,6 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
