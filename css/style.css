@@ -195,10 +195,10 @@ body {
 }
 @media screen and (max-width: 470px) {
     .question-box {
-        width: 290px;
+        width: 315px;
     }
     .answer-box {
-        width: 300px;
+        width: 315px;
     }
     .option {
         width: 120px;
